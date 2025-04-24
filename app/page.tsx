@@ -1,6 +1,7 @@
 'use client'
 import { motion } from 'motion/react'
 import { XIcon } from 'lucide-react'
+import InlineSVG from 'react-inlinesvg'
 import { Spotlight } from '@/components/ui/spotlight'
 import { Magnetic } from '@/components/ui/magnetic'
 import {
@@ -160,7 +161,10 @@ export default function Personal() {
                 size={64}
               />
               <div className="relative h-full w-full rounded-[15px] bg-white p-4 dark:bg-zinc-950">
-                <div className="relative flex w-full flex-row justify-between">
+                <div className="relative flex w-full flex-row items-center space-x-4">
+                  <div className="flex-shrink-0">
+                    <InlineSVG src={social.icon} className="h-6 w-6" />
+                  </div>
                   <div>
                     <h4 className="font-normal dark:text-zinc-100">
                       {social.title}

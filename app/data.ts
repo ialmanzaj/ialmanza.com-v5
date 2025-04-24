@@ -1,3 +1,5 @@
+
+
 type Project = {
   name: string
   description: string
@@ -11,6 +13,7 @@ type Socials = {
   description: string
   link: string
   id: string
+  icon: string
 }
 
 type BlogPost = {
@@ -52,24 +55,28 @@ export const SOCIALS: Socials[] = [
     description: 'Documenting my journey on building apps and businesses',
     link: 'https://x.com/ialmanzaj',
     id: 'x',
+    icon: '/x.svg',
   },
   {
     title: 'Instagram',
     description: 'Just for fun',
     link: 'https://www.instagram.com/isaac.developer',
     id: 'instagram',
+    icon: '/instagram.svg',
   },
   {
     title: 'YouTube',
     description: 'Long form content and startup vlogs',
     link: 'https://www.youtube.com/@isaac.almanza',
     id: 'youtube',
+    icon: '/youtube.svg',
   },
   {
     title: 'LinkedIn',
     description: 'My resume',
     link: 'https://www.linkedin.com/in/ialmanzaj',
     id: 'linkedin',
+    icon: '/linkedin.svg',
   },
 
   {
@@ -77,6 +84,7 @@ export const SOCIALS: Socials[] = [
     description: 'Code repository for my hackathons, personal tools and experiments',
     link: 'https://www.github.com/ialmanzaj',
     id: 'github',
+    icon: '/github.svg',
   },
 ]
 

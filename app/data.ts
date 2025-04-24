@@ -6,11 +6,9 @@ type Project = {
   id: string
 }
 
-type WorkExperience = {
-  company: string
+type Socials = {
   title: string
-  start: string
-  end: string
+  description: string
   link: string
   id: string
 }
@@ -29,57 +27,52 @@ type SocialLink = {
 
 export const PROJECTS: Project[] = [
   {
-    name: 'Motion Primitives Pro',
+    name: 'Zeneca',
     description:
-      'Advanced components and templates to craft beautiful websites.',
-    link: 'https://pro.motion-primitives.com/',
+      'Built an app that enables anyone to invest in US stocks and ETFs using stablecoins, buy fractional shares from $1 in less than 3-min.',
+    link: 'https://www.zeneca.app',
     video:
       'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
-    id: 'project1',
+    id: 'zeneca',
   },
   {
-    name: 'Motion Primitives',
-    description: 'UI kit to make beautiful, animated interfaces.',
-    link: 'https://motion-primitives.com/',
+    name: 'Fibbonacci Swap',
+    description:
+      'Fiat-to-crypto onramp/offramp powered by Chainlink and fintech APIs. Won a hackathon from BuidlGuidl in December 2023.',
+    link: 'https://github.com/ialmanzaj/fibbonacci-swap',
     video:
       'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0',
     id: 'project2',
   },
 ]
 
-export const WORK_EXPERIENCE: WorkExperience[] = [
+export const SOCIALS: Socials[] = [
   {
-    company: 'Reglazed Studio',
-    title: 'CEO',
-    start: '2024',
-    end: 'Present',
-    link: 'https://ibelick.com',
-    id: 'work1',
+    title: 'X.com / Twitter',
+    description: 'Documenting my journey on building apps and businesses',
+    link: 'https://x.com/ialmanzaj',
+    id: 'x',
   },
   {
-    company: 'Freelance',
-    title: 'Design Engineer',
-    start: '2022',
-    end: '2024',
-    link: 'https://ibelick.com',
-    id: 'work2',
+    title: 'Instagram',
+    description: 'Documenting my journey on building apps and businesses',
+    link: 'https://www.instagram.com/ialmanzaj',
+    id: 'instagram',
   },
   {
-    company: 'Freelance',
-    title: 'Front-end Developer',
-    start: '2017',
-    end: 'Present',
-    link: 'https://ibelick.com',
-    id: 'work3',
+    title: 'YouTube',
+    description: 'Long form content and startup vlogs',
+    link: 'https://www.youtube.com/@isaac.almanza',
+    id: 'youtube',
   },
 ]
 
 export const BLOG_POSTS: BlogPost[] = [
   {
-    title: 'Exploring the Intersection of Design, AI, and Design Engineering',
-    description: 'How AI is changing the way we design',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-1',
+    title: 'High agency',
+    description: 'one of the most important mental models I have learned',
+    link: '/blog/high-agency',
+    uid: 'high-agency',
   },
   {
     title: 'Why I left my job to start my own company',

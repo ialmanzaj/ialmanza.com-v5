@@ -65,6 +65,19 @@ export const SOCIALS: Socials[] = [
     link: 'https://www.youtube.com/@isaac.almanza',
     id: 'youtube',
   },
+  {
+    title: 'LinkedIn',
+    description: 'My resume',
+    link: 'https://www.linkedin.com/in/ialmanzaj',
+    id: 'linkedin',
+  },
+
+  {
+    title: 'Github',
+    description: 'Code repository for my hackathons, personal tools and experiments',
+    link: 'https://www.github.com/ialmanzaj',
+    id: 'github',
+  },
 ]
 
 export const BLOG_POSTS: BlogPost[] = [

@@ -55,7 +55,7 @@ export const SOCIALS: Socials[] = [
   },
   {
     title: 'Instagram',
-    description: 'Documenting my journey on building apps and businesses',
+    description: 'Just for fun',
     link: 'https://www.instagram.com/ialmanzaj',
     id: 'instagram',
   },

@@ -56,7 +56,7 @@ export const SOCIALS: Socials[] = [
   {
     title: 'Instagram',
     description: 'Just for fun',
-    link: 'https://www.instagram.com/ialmanzaj',
+    link: 'https://www.instagram.com/isaac.developer',
     id: 'instagram',
   },
   {
@@ -87,39 +87,26 @@ export const BLOG_POSTS: BlogPost[] = [
     link: '/blog/high-agency',
     uid: 'high-agency',
   },
-  {
-    title: 'Why I left my job to start my own company',
-    description:
-      'A deep dive into my decision to leave my job and start my own company',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-2',
-  },
-  {
-    title: 'What I learned from my first year of freelancing',
-    description:
-      'A look back at my first year of freelancing and what I learned',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-3',
-  },
+ 
 ]
 
 export const SOCIAL_LINKS: SocialLink[] = [
   {
     label: 'Github',
-    link: 'https://github.com/ibelick',
+    link: 'https://github.com/ialmanzaj',
   },
   {
     label: 'Twitter',
-    link: 'https://twitter.com/ibelick',
+    link: 'https://twitter.com/ialmanzaj',
   },
   {
     label: 'LinkedIn',
-    link: 'https://www.linkedin.com/in/ibelick',
+    link: 'https://www.linkedin.com/in/ialmanzaj',
   },
   {
     label: 'Instagram',
-    link: 'https://www.instagram.com/ibelick',
+    link: 'https://www.instagram.com/isaac.developer',
   },
 ]
 
-export const EMAIL = 'your@email.com'
+export const EMAIL = 'isaac@ialmanza.com'

@@ -10,7 +10,7 @@ export function Header() {
           <svg className="h-7 w-auto" viewBox="0 0 3153 719"
             version="1.1" xmlns="http://www.w3.org/2000/svg">
             <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-              <g className="fill-black">
+              <g className="fill-black dark:fill-white">
                 <g transform="translate(2550.000000, 4.000000)"
                   fillRule="nonzero">
                   <g

@@ -21,3 +21,7 @@
 ## 4. Active Decisions & Considerations
 - For now, assuming the identified pages (`/` and `/blog/high-agency`) are the only ones requiring unique metadata. New pages will need attention.
 - The homepage metadata can be further refined later if desired for more specificity.
+
+## 5. Memory Bank Update
+- Memory Bank updated (May 2025) to include Isaac Almanza's expanded personal and professional background, major fintech accomplishments, interests, and co-founder search criteria.
+- Website About and relevant sections should be updated to reflect this richer context and narrative.

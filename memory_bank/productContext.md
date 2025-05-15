@@ -11,6 +11,25 @@ This project focuses on optimizing `ialmanza.com`, the personal website of Isaac
 - Worked for Y Combinator-backed startups 
 - Founder of Zeneca — a stablecoin-based ETF investment platform for LATAM
 - Background includes work on savings products at Fondeadora, a leading neobank
+- Built and launched multiple zero-to-one products across fintech and Web3
+- Led development of an e-commerce platform processing over $5M+ in GTV
+- Built a tax automation platform serving 30K+ users
+- Shipped core features for a neobank investment app with 200K+ monthly active users
+- Won multiple competitive hackathons and innovation challenges (Base, Backdrop Build acquired)
+- Secured over $50K in non-dilutive Web3 grants to fund early-stage projects (Stellar)
+- Draper University Alumni – San Francisco, Sep 2024
+- Launch House Alumni – New York City, Oct 2023
+- Started programming at age 13; self-taught, driven by curiosity and a love for building
+
+## Life Story & Interests
+
+- Oldest child of 4; grew up playing video games and tinkering with technology, which led to programming
+- Passionate about building startups and working in tech
+- Enjoys going to the gym
+- Likes to write about philosophy, mental models, and startups
+- Interests: Consumer Health / Wellness, Education / Edtech, Developer Tools, B2B / Enterprise
+
+
 
 ## 3. Brand Pillars
 

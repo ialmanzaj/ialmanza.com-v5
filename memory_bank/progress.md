@@ -89,3 +89,7 @@ Memory Bank setup is in progress. All checklist items are currently pending.
 ## What's Left to Build/Fix
 
 - All items on the optimization checklist.
+
+## Memory Bank Update (May 2025)
+- Memory Bank now includes Isaac Almanza's detailed personal story, fintech accomplishments, interests, and co-founder search criteria.
+- Next content tasks: Update About and relevant website sections to align with this richer context.

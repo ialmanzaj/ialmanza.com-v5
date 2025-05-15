@@ -14,6 +14,7 @@ import {
 import Link from 'next/link'
 import { AnimatedBackground } from '@/components/ui/animated-background'
 import { PROJECTS, SOCIALS, BLOG_POSTS } from './data'
+import { usePlausible } from "@/hooks/usePlausible";
 
 const VARIANTS_CONTAINER = {
   hidden: { opacity: 0 },
@@ -119,6 +120,7 @@ function ProjectVideo({ src }: ProjectVideoProps) {
 // }
 
 export default function Personal() {
+  usePlausible();
   return (
     <motion.main
       className="space-y-24"

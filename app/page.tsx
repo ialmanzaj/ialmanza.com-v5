@@ -15,6 +15,8 @@ import Link from 'next/link'
 import { AnimatedBackground } from '@/components/ui/animated-background'
 import { PROJECTS, SOCIALS, BLOG_POSTS } from './data'
 import { usePlausible } from "@/hooks/usePlausible";
+import { Suspense } from "react";
+import PlausibleTracker from "@/components/PlausibleTracker";
 
 const VARIANTS_CONTAINER = {
   hidden: { opacity: 0 },
@@ -120,129 +122,133 @@ function ProjectVideo({ src }: ProjectVideoProps) {
 // }
 
 export default function Personal() {
-  usePlausible();
   return (
-    <motion.main
-      className="space-y-24"
-      variants={VARIANTS_CONTAINER}
-      initial="hidden"
-      animate="visible"
-    >
-      <motion.section
-        variants={VARIANTS_SECTION}
-        transition={TRANSITION_SECTION}
+    <>
+      <Suspense>
+        <PlausibleTracker />
+      </Suspense>
+      <motion.main
+        className="space-y-24"
+        variants={VARIANTS_CONTAINER}
+        initial="hidden"
+        animate="visible"
       >
-        <div className="flex-1">
-          <h1 className="text-zinc-600 dark:text-zinc-400">
-            I&apos;m Isaac Almanza, a tech entrepreneur and developer who built
-            my first app at 17. I&apos;ve scaled fintech platforms from neobanks
-            like Fondeadora to millions. Currently, I&apos;m building apps and
-            businesses based between Medellin and Panama.
-          </h1>
-        </div>
-      </motion.section>
+        <motion.section
+          variants={VARIANTS_SECTION}
+          transition={TRANSITION_SECTION}
+        >
+          <div className="flex-1">
+            <h1 className="text-zinc-600 dark:text-zinc-400">
+              I&apos;m Isaac Almanza, a tech entrepreneur and developer who built
+              my first app at 17. I&apos;ve scaled fintech platforms from neobanks
+              like Fondeadora to millions. Currently, I&apos;m building apps and
+              businesses based between Medellin and Panama.
+            </h1>
+          </div>
+        </motion.section>
 
-      <motion.section
-        variants={VARIANTS_SECTION}
-        transition={TRANSITION_SECTION}
-      >
-        <div className="flex flex-col space-y-2">
-          {SOCIALS.map((social) => (
-            <a
-              className="relative overflow-hidden rounded-2xl bg-zinc-300/30 p-[1px] dark:bg-zinc-600/30"
-              href={social.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              key={social.id}
-            >
-              <Spotlight
-                className="from-zinc-900 via-zinc-800 to-zinc-700 blur-2xl dark:from-zinc-100 dark:via-zinc-200 dark:to-zinc-50"
-                size={64}
-              />
-              <div className="relative h-full w-full rounded-[15px] bg-white p-4 dark:bg-zinc-950">
-                <div className="relative flex w-full flex-row items-center space-x-4">
-                  <div className="flex-shrink-0">
-                    <InlineSVG src={social.icon} className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h4 className="font-normal dark:text-zinc-100">
-                      {social.title}
-                    </h4>
-                    <p className="text-zinc-500 dark:text-zinc-400">
-                      {social.description}
-                    </p>
+        <motion.section
+          variants={VARIANTS_SECTION}
+          transition={TRANSITION_SECTION}
+        >
+          <div className="flex flex-col space-y-2">
+            {SOCIALS.map((social) => (
+              <a
+                className="relative overflow-hidden rounded-2xl bg-zinc-300/30 p-[1px] dark:bg-zinc-600/30"
+                href={social.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                key={social.id}
+              >
+                <Spotlight
+                  className="from-zinc-900 via-zinc-800 to-zinc-700 blur-2xl dark:from-zinc-100 dark:via-zinc-200 dark:to-zinc-50"
+                  size={64}
+                />
+                <div className="relative h-full w-full rounded-[15px] bg-white p-4 dark:bg-zinc-950">
+                  <div className="relative flex w-full flex-row items-center space-x-4">
+                    <div className="flex-shrink-0">
+                      <InlineSVG src={social.icon} className="h-6 w-6" />
+                    </div>
+                    <div>
+                      <h4 className="font-normal dark:text-zinc-100">
+                        {social.title}
+                      </h4>
+                      <p className="text-zinc-500 dark:text-zinc-400">
+                        {social.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </a>
-          ))}
-        </div>
-      </motion.section>
+              </a>
+            ))}
+          </div>
+        </motion.section>
 
-      <motion.section
-        variants={VARIANTS_SECTION}
-        transition={TRANSITION_SECTION}
-      >
-        <h3 className="mb-5 text-lg font-medium">Selected Projects</h3>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-          {PROJECTS.map((project) => (
-            <div key={project.name} className="space-y-2">
-              <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-                <ProjectVideo src={project.video} />
-              </div>
-              <div className="px-1">
-                <a
-                  className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50"
-                  href={project.link}
-                  target="_blank"
-                >
-                  {project.name}
-                  <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full"></span>
-                </a>
-                <p className="text-base text-zinc-600 dark:text-zinc-400">
-                  {project.description}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </motion.section>
-
-      <motion.section
-        variants={VARIANTS_SECTION}
-        transition={TRANSITION_SECTION}
-      >
-        <h3 className="mb-3 text-lg font-medium">Blog</h3>
-        <div className="flex flex-col space-y-0">
-          <AnimatedBackground
-            enableHover
-            className="h-full w-full rounded-lg bg-zinc-100 dark:bg-zinc-900/80"
-            transition={{
-              type: 'spring',
-              bounce: 0,
-              duration: 0.2,
-            }}
-          >
-            {BLOG_POSTS.map((post) => (
-              <Link
-                key={post.uid}
-                className="-mx-3 rounded-xl px-3 py-3"
-                href={post.link}
-                data-id={post.uid}
-              >
-                <div className="flex flex-col space-y-1">
-                  <h4 className="font-normal dark:text-zinc-100">
-                    {post.title}
-                  </h4>
-                  <p className="text-zinc-500 dark:text-zinc-400">
-                    {post.description}
+        <motion.section
+          variants={VARIANTS_SECTION}
+          transition={TRANSITION_SECTION}
+        >
+          <h3 className="mb-5 text-lg font-medium">Selected Projects</h3>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+            {PROJECTS.map((project) => (
+              <div key={project.name} className="space-y-2">
+                <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
+                  <ProjectVideo src={project.video} />
+                </div>
+                <div className="px-1">
+                  <a
+                    className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50"
+                    href={project.link}
+                    target="_blank"
+                  >
+                    {project.name}
+                    <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full"></span>
+                  </a>
+                  <p className="text-base text-zinc-600 dark:text-zinc-400">
+                    {project.description}
                   </p>
                 </div>
-              </Link>
+              </div>
             ))}
-          </AnimatedBackground>
-        </div>
-      </motion.section>
-    </motion.main>
+          </div>
+        </motion.section>
+
+        <motion.section
+          variants={VARIANTS_SECTION}
+          transition={TRANSITION_SECTION}
+        >
+          <h3 className="mb-3 text-lg font-medium">Blog</h3>
+          <div className="flex flex-col space-y-0">
+            <AnimatedBackground
+              enableHover
+              className="h-full w-full rounded-lg bg-zinc-100 dark:bg-zinc-900/80"
+              transition={{
+                type: 'spring',
+                bounce: 0,
+                duration: 0.2,
+              }}
+            >
+              {BLOG_POSTS.map((post) => (
+                <Link
+                  key={post.uid}
+                  className="-mx-3 rounded-xl px-3 py-3"
+                  href={post.link}
+                  data-id={post.uid}
+                >
+                  <div className="flex flex-col space-y-1">
+                    <h4 className="font-normal dark:text-zinc-100">
+                      {post.title}
+                    </h4>
+                    <p className="text-zinc-500 dark:text-zinc-400">
+                      {post.description}
+                    </p>
+                  </div>
+                </Link>
+              ))}
+            </AnimatedBackground>
+          </div>
+        </motion.section>
+      </motion.main>
+    </>
   )
 }

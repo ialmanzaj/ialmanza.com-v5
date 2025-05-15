@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://ialmanza.com
+
+# Sitemaps
+Sitemap: https://ialmanza.com/sitemap.xml

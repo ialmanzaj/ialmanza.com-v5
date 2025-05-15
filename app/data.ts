@@ -1,5 +1,3 @@
-
-
 type Project = {
   name: string
   description: string
@@ -81,7 +79,8 @@ export const SOCIALS: Socials[] = [
 
   {
     title: 'Github',
-    description: 'Code repository for my hackathons, personal tools and experiments',
+    description:
+      'Code repository for my hackathons, personal tools and experiments',
     link: 'https://www.github.com/ialmanzaj',
     id: 'github',
     icon: '/github.svg',
@@ -95,7 +94,6 @@ export const BLOG_POSTS: BlogPost[] = [
     link: '/blog/high-agency',
     uid: 'high-agency',
   },
- 
 ]
 
 export const SOCIAL_LINKS: SocialLink[] = [

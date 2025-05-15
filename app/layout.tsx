@@ -14,7 +14,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: 'Isaac Almanza',
   description:
-    'Isaac Almanza: Tech entrepreneur building innovative web applications and scaling digital businesses. Expertise in software development, product strategy, and bringing ideas to market.',
+    'Isaac Almanza: Tech entrepreneur building innovative web apps & scaling digital businesses. Expertise in software development, product strategy & bringing ideas to market.',
 }
 
 const geist = Geist({
